@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa; /* Sleek light background */
+    color: #3d4152; /* Swiggy text color */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    color: #282c3f;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid #ebebeb;
+    padding: 16px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.food-munch-logo {
+    width: 90px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.food-munch-logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    color: #3d4152 !important;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #d0b200 !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #d0b200;
+    bottom: -6px;
+    left: 0;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.btn-dark {
+    background: #d0b200 !important;
+    color: white !important;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(208, 178, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    background: #b59b00 !important;
+    box-shadow: 0 6px 20px rgba(208, 178, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* BANNER */
+.banner-section-bg-container {
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.95) 100%), url("https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/foodmunch-banner-bg.png");
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.banner-heading {
+    color: #282c3f;
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+    text-shadow: none;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.banner-caption {
+    color: #686b78;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 48px;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.custom-button {
+    color: white;
+    background: #d0b200;
+    width: 150px;
+    height: 52px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(208, 178, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.custom-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(208, 178, 0, 0.4);
+    background: #b59b00;
+}
+
+.custom-outline-button {
+    color: #d0b200;
+    background-color: transparent;
+    width: 150px;
+    height: 52px;
+    border: 2px solid #d0b200;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.custom-outline-button:hover {
+    background-color: rgba(208, 178, 0, 0.05);
+    transform: translateY(-3px);
+}
+
+/* WCU Section */
+.wcu-section {
+    background-color: #ffffff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.wcu-section-heading {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #282c3f;
+}
+
+.wcu-section-description {
+    color: #686b78;
+    font-size: 18px;
+    max-width: 650px;
+    margin-bottom: 56px;
+}
+
+.wcu-card {
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #f0f0f5;
+    border-radius: 16px;
+    padding: 40px 32px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+
+.wcu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: #d0b200;
+}
+
+.wcu-card-image {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 28px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wcu-card:hover .wcu-card-image {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.wcu-card-title {
+    color: #282c3f;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.wcu-card-description {
+    color: #686b78;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.offers {
+    color: #d0b200;
+    font-weight: 800;
+}
+
+/* MENU SECTION */
+.explore-menu-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.menu-section-heading {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #282c3f;
+}
+
+.menu-item-card {
+    background: #ffffff;
+    border: 1px solid #f0f0f5;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+}
+
+.menu-item-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+.menu-item-image {
+    width: 100%;
+    border-radius: 16px;
+    transition: transform 0.6s ease;
+}
+
+.menu-item-card:hover .menu-item-image {
+    transform: scale(1.08);
+}
+
+.menu-card-title {
+    color: #282c3f;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.menu-item-link {
+    color: #d0b200;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-item-link:hover {
+    color: #b59b00;
+    text-decoration: none;
+}
+
+.menu-item-link svg {
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item-link:hover svg {
+    transform: translateX(6px);
+}
+
+/* Healthy Food Section */
+.healthy-food-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.healthy-food-section-img {
+    width: 90%;
+    max-width: 450px;
+    filter: drop-shadow(0 24px 36px rgba(0,0,0,0.08));
+    animation: float 6s ease-in-out infinite;
+}
+
+.healthy-food-section-heading {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: #282c3f;
+}
+
+.healthy-food-section-description {
+    color: #686b78;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* Delivery Section */
+.delivery-and-payment-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.delivery-and-payment-section-img {
+    width: 90%;
+    max-width: 450px;
+    filter: drop-shadow(0 16px 24px rgba(0,0,0,0.06));
+}
+
+.delivery-and-payment-section-heading {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #282c3f;
+}
+
+.delivery-and-payment-section-description {
+    color: #686b78;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.payment-card-img {
+    width: 56px;
+    height: 56px;
+    margin-right: 24px;
+    filter: grayscale(100%) opacity(0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.payment-card-img:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* Thanking Customers Section */
+.thanking-customers-section {
+    background: linear-gradient(135deg, #fffcf0 0%, #fff4c6 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.thanking-customers-section-heading {
+    color: #282c3f;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.thanking-customers-section-description {
+    color: #d0b200;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.thanking-customers-section-img {
+    width: 100%;
+    max-width: 400px;
+    filter: drop-shadow(0 20px 30px rgba(208, 178, 0, 0.2));
+}
+
+.thanking-customers-section-modal-title {
+    color: #282c3f;
+    font-weight: 800;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 24px 48px rgba(0,0,0,0.1);
+}
+
+.modal-header {
+    border-bottom: 1px solid #f0f0f5;
+}
+
+.modal-footer {
+    border-top: 1px solid #f0f0f5;
+}
+
+.close {
+    color: #282c3f;
+}
+
+/* Follow Us Section */
+.follow-us-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.follow-us-section-heading {
+    text-align: center;
+    color: #282c3f;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 48px;
+}
+
+.follow-us-icon-container {
+    background: #f8f9fa;
+    width: 88px;
+    height: 88px;
+    border-radius: 44px;
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.follow-us-icon-container:hover {
+    background: #fffcf0;
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(208, 178, 0, 0.15);
+}
+
+.icon, .follow-us-section svg {
+    color: #d0b200;
+    transition: all 0.3s ease;
+}
+
+.follow-us-icon-container:hover svg {
+    transform: scale(1.2);
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #282c3f;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.footer-section-mail-id {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+.footer-section-address {
+    color: #93959f;
+    font-size: 16px;
+    max-width: 320px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
