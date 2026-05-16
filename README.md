@@ -1,6 +1,6 @@
 Alright—let’s make this actually **stand out on GitHub**, not a basic README. Here’s a **clean, premium, portfolio-level README** for your project 👇
 
----
+--
 
 # 🍽️ Food Munch
 
