@@ -122,4 +122,4 @@ I can upgrade this with:
 
 Just tell me 👍
 
-this is fullstack and devops 
+this is fullstack and devops  of doing akhil and syamprasad
