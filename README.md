@@ -122,3 +122,4 @@ I can upgrade this with:
 
 Just tell me 👍
 
+this is fullstack and devops 
